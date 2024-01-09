@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="./scripts/data.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="modal-window">
+            <div class="modal-window__background" id="modalWindowId">
+                <div class="modal-window__form">
+                    <p class="modal-window__head">Войти</p>
+                    <div class="modal-window__username">
+                        <p class="modal-window__label">Имя пользователя</p>
+                        <input class="modal-window__input" id="usernameId" type="text" placeholder="Введите имя пользователя">
+                    </div>
+                    <div class="modal-window__password">
+                        <p class="modal-window__label">Пароль</p>
+                        <input class="modal-window__input" id="passwordId" type="password" placeholder="Введите пароль">
+                        <a class="modal-window__forgot-password">Забыли пароль?</a>
+                    </div>
+                    <div class="modal-window__button-wrapper">
+                        <div class="modal-window__button-background"></div>
+                        <button class="modal-window__button" id="modalWindowButtonId">Войти</button>
+                    </div>
+                    <p class="modal-window__another">Или войдите с помощью:</p>
+                    <div class="modal-window__another-options">
+                        <img class="modal-window__option" src="./assets/images/steam-logo.png">
+                        <img class="modal-window__option" src="./assets/images/steam-logo.png">
+                        <img class="modal-window__option" src="./assets/images/steam-logo.png">
+                        <img class="modal-window__option" src="./assets/images/steam-logo.png">
+                    </div>
+                    <p class="modal-window__sing-up-head">Зарегистрироваться с помощью формы:</p>
+                    <a class="modal-window__sing-up-link" href="#">Зарегистрироваться</a>
+                </div>
+            </div>
+        </div>
+        <div class="top-bar-wrapper">
+            <div class="top-bar">
+                <a href="#" class="home-link">
+                    <img class="home-link__icon" src="./assets/images/home-page.png" >
+                    <p class="home-link__name">Home</p>
+                </a>
+                <div class="stick"></div>
+                <div class="kind-game">
+                    <div class="kind-game__select">
+                        <img class="kind-game__icon" src="./assets/images/icon-game-console.png">
+                        <p class="kind-game__name">Game</p>
+                        <img class="kind-game__drop-icon" src="./assets/images/drop-down-menu.png">
+                    </div>
+                    <div class="kind-game__list-wrapper">
+                        <div class="kind-game__list">
+                            <div class="kind-game__option">
+                                <img class="kind-game__icon" src="./assets/images/icon-game-console.png">
+                                <p class="kind-game__option-name">Game type 1</p>
+                            </div>
+                            <div class="kind-game__option">
+                                <img class="kind-game__icon" src="./assets/images/icon-game-console.png">
+                                <p class="kind-game__option-name">Game type 2</p>
+                            </div>
+                            <div class="kind-game__option">
+                                <img class="kind-game__icon" src="./assets/images/icon-game-console.png">
+                                <p class="kind-game__option-name">Game type 3</p>
+                            </div>
+                            <div class="kind-game__option">
+                                <img class="kind-game__icon" src="./assets/images/icon-game-console.png">
+                                <p class="kind-game__option-name">Game type 4</p>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="user" id="userId">
+                    <button class="sign-in" id="signInId">
+                        <p class="sign-in__text">Sign in</p>
+                    </button>                    
+                </div>
+            </div>            
+        </div>
+        <div class="roulette-wrapper">
+            <div class="roulette">
+                <p class="name">Рулетка</p>
+                <div class="window">
+                    <div class="triangle"></div>
+                    <div class="window__container" id="containerId">
+                    </div>
+                </div>
+                <button class="spin" onclick="spin()">Крутить за 500 у.е.</button>
+            </div>
+        </div>
+        <div class="contains-wrapper">
+            <div class="contains">
+                <p class="contains__head">Может выпасть:</p>
+                <div class="contains__list" id="containsListId">
+                    <!-- Сюда попадют элементы массива containsItems из data.js -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/fill-contains.js"></script>
+    <script src="./scripts/ui.js"></script>
+    <script src="./scripts/sign-up.js"></script>
+</body>
+
+</html>
